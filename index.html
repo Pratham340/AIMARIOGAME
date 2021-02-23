@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <link rel="icon" href="https://assets.vg247.com/current//2016/09/Mobile_SuperMarioRun_icon_png_jpgcopy-600x600.jpg" type="image/icon type">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+    <title>AI Mario Game</title>
+    <!-- link p5.js and its addons like p5.dom.js or p5.sound.js -->
+    <script src="lib/p5.min.js" type="text/javascript"></script>
+    <!-- link p5.play.js -->
+    <script src="lib/p5.play.js" type="text/javascript"></script>
+    <!-- link p5.dom.js -->
+    <script src="lib/p5.dom.js" type="text/javascript"></script>
+
+    <!-- link your javascript sketch -->
+    <script src="scripts/sprites.js" type="text/javascript"></script>
+    <script src="main.js" type="text/javascript"></script>
+    <script src="characters_environment.js" type="text/javascript"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/addons/p5.sound.min.js"></script>
+    <!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+  var _smartsupp = _smartsupp || {};
+  _smartsupp.key = '42531907fb33425900d8402a508b2235ef2177cf';
+  window.smartsupp||(function(d) {
+    var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+    s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+    c.type='text/javascript';c.charset='utf-8';c.async=true;
+    c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+  })(document);
+  </script>
+  </head>
+  <body background="background.jpg">
+    <center>
+
+      <div class="btn btn-danger heading" style="position:sticky;top:0;z-index:99999">
+        <center>
+        <img src="m.png" class="topright" style="width: 3%;">
+        <h3>AI Mario Game</h3>
+        <button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="logout()" style="margin-left: 10px; margin-bottom:10px;">Logout</button>
+        <button class="btn btn-danger"  data-toggle="modal" data-target="#myModal">Instructions</button>
+      </center>
+      </div>
+      <img src="mario.jpg" class="big_image">
+      <br><br>
+      <button class="btn btn-success" onclick="startGame()" id="start">Play Game</button>
+      <br><br>
+      <h3 id="status" class="btn btn-warning"></h3>
+      <br><br>
+      <div id="canvas"></div>
+      <div id="game_console"></div>
+
+      <h4 style="width: 100%; position:sticky;bottom:0;z-index:99999" class="btn-danger">Source Code: <a href="https://github.com/linuk"><b>Linuk</b></a>&nbsp;&nbsp;||&nbsp;&nbsp;Game Credit: <a href="https://mario.nintendo.com/"><b>Mario</b></a></h4>
+       <div id="myModal" class="modal fade">
+       <div class="modal-dialog">
+         <div class="modal-content" style="background-color: red;">
+           <div class="modal-header" style="margin-top:30px;">
+             <button type="button" class="close" data-dismiss="modal" style="font-size:50px; color:black;">&times;</button>
+             <h4 class="modal-title" style="font-family:'Monoton',cursive;">Instructions</h4>
+         </div>
+         <div class="modal-body">
+           <img src="jump.png" class="img-responsive in-img">
+           <img src="left.png" class="img-responsive in-img">
+           <img src="right.png" class="img-responsive in-img">
+       </div>
+     </div>
+     </div>
+     </div>
+</center>
+</body>
+</html>
